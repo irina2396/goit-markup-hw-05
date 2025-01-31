@@ -58,7 +58,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section id="advantages" class="advantages">
@@ -441,11 +443,11 @@
           <p class="social-text">Social media</p>
           <ul class="soc-media-list">
             <li class="soc-media-item">
-            <a href="" class="media-link">
-              <svg class="media-link-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-instagram-2"></use>
-              </svg>
-            </a>
+              <a href="" class="media-link">
+                <svg class="media-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
             </li>
             <li class="soc-media-item">
               <a href="" class="media-link">
@@ -470,7 +472,111 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="subscribe-text">Subscribe</p>
+          <form class="footer-subscribe-form" action="">
+            <label aria-label="footer-email" class="footer-label">
+              <input
+                class="footer-subscribe-input"
+                type="email"
+                name="footer-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-btn">
+              Subscribe
+              <svg class="footer-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <div class="backdrop is-open" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="close-btn" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="form-field">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="user-name"
+                id="user-name"
+                type="text"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-tel">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="user-tel"
+                id="user-tel"
+                type="tel"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="user-email"
+                id="user-email"
+                type="email"
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              class="modal-textarea"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input
+              class="check-input visually-hidden"
+              type="checkbox"
+              name="user-policy"
+              id="user-policy"
+              value="true"
+            />
+            <label class="form-check-label" for="user-policy">
+              <span class="form-check-text">
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="privacy-policy" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="send-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
