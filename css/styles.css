@@ -546,10 +546,11 @@ img {
     border-radius: 4px;
     width: 264px;
     height: 40px;
+    padding-left: 16px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent;
     outline: transparent;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe-input:focus {
@@ -557,7 +558,7 @@ img {
 }
 
 .footer-btn {
-    max-width: 165px;
+    min-width: 165px;
     height: 40px;
     padding: 8px 24px;
     margin-left: auto;
@@ -572,6 +573,7 @@ img {
     color: #fff;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -627,19 +629,29 @@ img {
 
 .modal-close {
     position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     border-radius: 50%;
+    height: 24px;
     top: 24px;
     right: 24px;
+    padding: 0;
     box-shadow: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
 .modal-close:focus {
     background-color: #404bbf;
     border: none;
+}
+
+.close-btn {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .close-btn,
@@ -660,15 +672,15 @@ img {
 /* form */
 
 .form-field {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .form-label {
-    display: inline-block;
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -685,6 +697,7 @@ img {
     background-color: transparent;
     padding-left: 38px;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -693,6 +706,7 @@ img {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -713,15 +727,13 @@ img {
     border-radius: 4px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     background-color: transparent;
     outline: transparent;
     resize: none;
-}
-
-.placeholder {
-    color: rgba(46, 47, 66, 0.4);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:focus {
@@ -730,12 +742,15 @@ img {
 
 /* checkbox */
 
+.form-checkbox {
+    margin-bottom: 24px;
+}
 
 .form-check-label {
     align-items: center;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -750,13 +765,13 @@ img {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-input:checked + .form-check-label .form-check-text {
-    border-radius: 2px;
     background-color: #404bbf;
-    border: 1px solid #404bbf;
-    fill: #fff;
+    border: none;
+    fill: #f4f4fd;
 }
 
 .privacy-policy {
@@ -767,7 +782,9 @@ img {
 }
 
 .send-btn {
-    width: 169px;
+    display: block;
+    cursor: pointer;
+    min-width: 169px;
     height: 56px;
     margin: 24px 96px;
     padding: 16px 32px;
@@ -781,4 +798,5 @@ img {
     border: none;
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
